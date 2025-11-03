@@ -4,17 +4,23 @@ class Program
 {
     static void Main(string[] args)
     {
-        Book book = new Book("C# for beginners", "Bill Gates", "1234567");
-        Book book1 = new Book("Ultimate C#", "Microsoft", "2233445");
-        Console.WriteLine("Currently available books");
-        book.DisplayInfo();
-        book1.DisplayInfo();
+        List<Book> books = new List<Book>();
+        List<Member> members = new List<Member>();
 
-        Member member = new Member(1, "John Smith", "1 High Street", 0790090090);
-        Member member1 = new Member(2, "Mary Jones", "102 Garden Road", 0790345666);
+        books.Add(new Book("C# for beginners", "Bill Gates", "1234567"));
+        books.Add(new Book("Ultimate C#", "Microsoft", "2233445"));
 
-        Console.WriteLine("Current library members");
-        member.DisplayInfo();
-        member1.DisplayInfo();
+        members.Add(new Member(1, "John Smith", "1 High Stree", 0790090090));
+        members.Add(new Member(2, "Mary Jones", "102 Garden Road", 0790345666));
+
+        foreach (Book book in books)
+        {
+            book.DisplayInfo();
+        }
+
+        foreach (Member member in members)
+        {
+            member.DisplayInfo();
+        }
     }
 }
