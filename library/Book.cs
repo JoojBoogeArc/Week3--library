@@ -22,7 +22,6 @@
             set { isbn = value; }
         }
 
-        // Constructor to add a new book
         public Book(string bookTitle, string bookAuthor, string bookISBN)
         {
             this.Title = bookTitle;
@@ -30,7 +29,6 @@
             this.ISBN = bookISBN;
         }
 
-        // Method to display information about a book
         public void DisplayInfo()
         {
             Console.WriteLine($"Book title: {Title}");
